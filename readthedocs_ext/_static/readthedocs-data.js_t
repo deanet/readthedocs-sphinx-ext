@@ -8,11 +8,7 @@
     theme: "{{ html_theme }}",
     builder: "sphinx",
     docroot: "{{ conf_py_path }}",
-    {% if page_source_suffic %}
-    source_suffix: "{{ page_source_suffix }}",
-    {% else %}
     source_suffix: "{{ source_suffix }}",
-    {% endif %}
     api_host: "{{ api_host }}",
     commit: "{{ commit }}"
   };
