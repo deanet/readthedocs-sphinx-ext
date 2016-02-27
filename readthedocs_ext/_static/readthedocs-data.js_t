@@ -4,7 +4,6 @@
     language: "{{ rtd_language }}",
     subprojects: {},
     canonical_url: "{{ canonical_url }}",
-    page: "{{ pagename }}",
     theme: "{{ html_theme }}",
     builder: "sphinx",
     docroot: "{{ conf_py_path }}",
@@ -15,9 +14,3 @@
   {% for slug, url in subprojects %}
   READTHEDOCS_DATA.subprojects["{{ slug }}"] = "{{ url }}";
   {% endfor %}
-
-  // Old variables
-  var doc_version = "{{ current_version }}";
-  var doc_slug = "{{ slug }}";
-  var page_name = "{{ pagename }}";
-  var html_theme = "{{ html_theme }}";
